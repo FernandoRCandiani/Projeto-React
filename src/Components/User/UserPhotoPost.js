@@ -14,11 +14,11 @@ const UserPhotoPost = () => {
   const idade = useForm("number");
   const [img, setImg] = React.useState({});
   const { data, error, loading, request } = useFetch();
-  const navidate = useNavigate();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
-    if (data) navidate('/conta');
-  }, [data, navidate])
+    if (data) navigate("/conta");
+  }, [data, navigate]);
 
   function handleSubmit(event) {
     event.preventDefault();
