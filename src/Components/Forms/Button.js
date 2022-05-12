@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./Button.module.css";
+import React from 'react';
+import styles from './Button.module.css';
 
-const Button = ({ children, ...props }) => { // valor que tiver dentro do componete é children
+const Button = ({ children, ...props }) => {
   return (
     <button {...props} className={styles.button}>
       {children}

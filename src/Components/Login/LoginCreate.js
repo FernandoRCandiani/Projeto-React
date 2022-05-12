@@ -23,13 +23,12 @@ const LoginCreate = () => {
       password: password.value,
     });
     const { response } = await request(url, options);
-    if (response.ok) userLogin(username.value, password.value)
+    if (response.ok) userLogin(username.value, password.value);
   }
 
   return (
-    <section className='animeLeft'>
-      <h1 className='title'>Cadastre-se</h1>
-
+    <section className="animeLeft">
+      <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Email" type="email" name="email" {...email} />
@@ -42,7 +41,6 @@ const LoginCreate = () => {
         <Error error={error} />
       </form>
     </section>
-      
   );
 };
 

@@ -1,15 +1,15 @@
 .button {
   font-size: 1rem;
   font-family: var(--type-first);
-  color: #764701;
-  background: #fb1;
-  padding: 0.8rem 1.2rem;
-  min-width: 8rem;
+  cursor: pointer;
   border: none;
   border-radius: 0.4rem;
-  box-sizing: border-box; /* faz com que não soma as bordas depois */
-  cursor: pointer;
-  transition: .1s;
+  background: #fb1;
+  color: #764701;
+  min-width: 8rem;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
 }
 
 .button:hover,

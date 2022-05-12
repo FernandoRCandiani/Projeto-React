@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./Input.module.css";
+import React from 'react';
+import styles from './Input.module.css';
 
 const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
   return (
@@ -10,13 +10,13 @@ const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
       <input
         id={name}
         name={name}
-        type={type}
         className={styles.input}
+        type={type}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
       />
-     {error && <p className={styles.error}>{error}</p>}
+      {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 };
