@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const UserStats = () => {
-  return (
-    <div>UserStats</div>
-  )
-}
+  return <div>Estatísticas</div>;
+};
 
 export default UserStats;
-

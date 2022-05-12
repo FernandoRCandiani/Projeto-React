@@ -1,20 +1,18 @@
-import React from "react";
-import { ReactComponent as Enviar } from "../../Assets/enviar.svg";
-import useFetch from "../../Hooks/useFetch";
-import Error from "../Helper/Error"
-import { COMMENT_POST } from "../../Api";
-import styles from "./PhotoCommentsForm.module.css";
-
+import React from 'react';
+import { ReactComponent as Enviar } from '../../Assets/enviar.svg';
+import useFetch from '../../Hooks/useFetch';
+import Error from '../Helper/Error';
+import { COMMENT_POST } from '../../Api';
+import styles from './PhotoCommentsForm.module.css';
 
 const PhotoCommentsForm = ({ id, setComments }) => {
-  const [comment, setComment] = React.useState("");
+  const [comment, setComment] = React.useState('');
   const { request, error } = useFetch();
 
   async function handleSubmit(event) {
     event.preventDefault();
     const { url, options } = COMMENT_POST(id, { comment });
     const { response, json } = await request(url, options);
-    console.log(json);
     if (response.ok) {
       setComment('');
       setComments((comments) => [...comments, json]);
