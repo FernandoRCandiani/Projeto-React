@@ -7,7 +7,7 @@ import UserStats from './UserStats';
 import { UserContext } from '../../UserContext';
 
 const User = () => {
-  const {data} = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   return (
     <section className="container">
